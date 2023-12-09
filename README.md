@@ -29,9 +29,14 @@ Place it here: RVC_Onnx_Infer/assets/vec
 ( One at a time. Any consecutive inferences will overwrite the previous file so, copy / move it somewhere else.
 
 ⠀<br />
-### 5. To switch the device to Cuda or DML, change "**cpu**" to any of the mentioned.g<br />
+### 5. To switch the device to Cuda or DML, change "**cpu**" to any of the mentioned.<br />
 The 27th line of '**RVC_Onnx_Infer.py**' script;
 > device = "**cpu**"  # options: **dml**, **cuda**, **cpu**
+
+⠀<br />
+### 6. To change hop_size, replace the '64' value with any desired.<br />
+The 22nd line of '**RVC_Onnx_Infer.py**' script;
+> hop_size = 64 # hop size for inference  -  smaller size = higher accuracy, yet, higher risk of catching noise residues. try: 64, 128 or 512 or try own / custom.
 
 ⠀<br />
 ⠀<br />
