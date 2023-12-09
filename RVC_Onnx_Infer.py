@@ -24,7 +24,7 @@ sid = 0 # Speaker ID, unusable atm.
 vec_name = "vec-768-layer-12"  # pretrained ONNX variant of vec
 
 # DEVICE SETTINGS
-device = "dml"  # options: dml, cuda, cpu
+device = "cpu"  # options: dml, cuda, cpu
 
 # Set your model's name                         / Here / 
 model_path = os.path.join("onnx_models", "Your_Model.onnx")  # Your .ONNX model
