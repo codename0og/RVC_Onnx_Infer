@@ -1,22 +1,12 @@
 # Codename;0's improved RVC Onnx models Inference. 
-## Ready to be used with RVC V2 onnx models. ( CPU, Cuda and DML support )
-
-### Notes:
-- Project is in an **early alpha-dev / test / debug state.**
-- Currently only Dio F0 Pitch extraction until I figure out the rest.
-- It is supporting **RVC V2 onnx models only.**<br />
-(V1 do not work unless you get 256-layer-9 vec onnx and modify the code appropriately.)
-⠀<br />
-- **CPU is set by default** as the main device for the sake of compatibility.<br />
+## Ready to be used with RVC V2 onnx models. ( CPU, Cuda and DML support )<br />
 ### Todo:
 - Adding index/faiss support
+- Automating stuff / making i/o handling easier.
 - Adding rmvpe f0 method
 - Better automation and easier input/output managment + stuff picker.
 - Possibly even a gui or web-ui ~ one day huh.
-- Quite possibly a tflite model exporting for future Mobile-RVC-infer-port-project ( ***Not 100% sure yet, concept stage.*** )
-⠀<br />
-⠀<br />
-⠀<br />
+- Quite possibly a tflite model exporting for future Mobile-RVC-infer-port-project ( ***Not 100% sure yet, concept stage.*** )<br />
 # Usage guide:
 
 ### 1. First, prior to any inferencing, you gotta obtain the: '**vec-768-layer-12.onnx**' file from:<br />
@@ -42,3 +32,15 @@ Place it here: RVC_Onnx_Infer/assets/vec
 ### 5. To switch the device to Cuda or DML, change "**cpu**" to any of the mentioned.g<br />
 The 27th line of '**RVC_Onnx_Infer.py**' script;
 > device = "**cpu**"  # options: **dml**, **cuda**, **cpu**
+
+⠀<br />
+⠀<br />
+⠀<br />
+# INITIAL RELEASE: v0.1a<br />
+### Notes:
+- Project is in an **early alpha-dev / test / debug state.**
+- Currently only Dio F0 Pitch extraction until I figure out the rest.
+- It is supporting **RVC V2 onnx models only.**<br />
+(V1 models do not work unless you get 256-layer-9 vec onnx and modify the code appropriately.)
+⠀<br />
+- **CPU is set by default** as the main device for the sake of compatibility, need more testing.<br />
