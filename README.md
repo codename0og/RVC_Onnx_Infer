@@ -49,6 +49,7 @@ The 22nd line of '**RVC_Onnx_Infer.py**' script;
 ( Now it's internally slicing, inferencing the segments 1 by 1 to avoid memory issues and merging it all into 1 final output. )  
 - **DML x CPU is set as default** for the main device.<br />
 - PM F0 Pitch estimation: Yea, I sorta fixed it but it's not perfect ( Doesn't support custom hop length too ) - Dio is better.
+> That is, until a workaround for pitch offset / hop length related(?) is found.
 - Cosmetics changes - Made the console a lil bit more fancy lol + logging of segmenting process and so on.
 ⠀<br />
 ⠀<br />
