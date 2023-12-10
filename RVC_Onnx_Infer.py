@@ -17,17 +17,17 @@ onnx_models = os.path.join(root_path, "models") # ONNX models folder
 
 # INFERENCE CONFIGURATION
 sampling_rate = 48000  # Your model's sample rate;   32000, 40000, 48000
-f0_up_key = 0  # pitch in semitones, either up or down.
-f0_method = "dio"  # F0 pitch extraction method.  For now:   dio, pm and harvest are supported
-hop_size = 64 # hop size for inference  -  smaller size = higher accuracy, yet, higher risk of catching noise residues. try: 64, 128 or 512 or try own / custom.
+f0_up_key = 0  # transpose; in semitones either up or down.
+f0_method = "dio"  # F0 pitch estimation method.  ( For now only dio works properly. PM is fixed and works, but Dio is better. Harvest is broken )
+hop_size = 64 # hop size for inference. ( Currently, applies only to dio F0 ) Try: 32, 64, 128, 256, 512  or custom of your choice
 sid = 0 # Speaker ID, unusable atm.
 vec_name = "vec-768-layer-12"  # pretrained ONNX variant of vec
 
 # DEVICE SETTINGS
 device = "dml"  # options: dml, cuda, cpu
 
-# Set your model's name                         / Here / 
-model_path = os.path.join("onnx_models", "Your_Model")  # Your .ONNX model
+# Set your model's name                       / Here / 
+model_path = os.path.join("onnx_models", "Your_Model.onnx")  # Your .ONNX model
 output_folder = "output"  # Output folder for inferences
 output_filename = "infer_output_merged.wav"  # name for inference outputs
 
