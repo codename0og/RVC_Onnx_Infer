@@ -42,7 +42,7 @@ def get_f0_predictor(f0_predictor, hop_length, sampling_rate, **kargs):
         from infer.lib.infer_pack.modules.F0Predictor.PMF0Predictor import PMF0Predictor
 
         f0_predictor_object = PMF0Predictor(
-            hop_length=hop_length, sampling_rate=sampling_rate
+            sampling_rate=sampling_rate
         )
     elif f0_predictor == "harvest":
         from infer.lib.infer_pack.modules.F0Predictor.HarvestF0Predictor import (
