@@ -43,11 +43,11 @@ The 22nd line of '**RVC_Onnx_Infer.py**' script;
 ⠀<br />
 ⠀<br />
 # | v0.2a | 10.12.2023 - CHANGELOG: <br />
-### Notes:
-- No more '50 seconds max' per infer / file length.
-( Now it's internally: Slicing, inferencing the segments 1 by 1 to avoid memory issues and merging it all into 1 final output. )  
+### Changes:
+- **Inference max length limit off** - No more '50 seconds max' per infer / file length.<br />
+( Now it's internally slicing, inferencing the segments 1 by 1 to avoid memory issues and merging it all into 1 final output. )  
 - **DML x CPU is set as default** for the main device.<br />
-- Made the console a lil bit more fancy lol
+- Cosmetics changes - Made the console a lil bit more fancy lol + logging of segmenting process and so on.
 ⠀<br />
 ⠀<br />
 ⠀<br />
