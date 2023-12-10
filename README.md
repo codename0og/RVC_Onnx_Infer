@@ -1,4 +1,5 @@
-# Codename;0's improved RVC Onnx models Inference. 
+# Codename;0's improved RVC Onnx models Inference.<br />
+
 ## Ready to be used with RVC V2 onnx models. ( CPU, Cuda and DML support )<br />
 ### Todo:
 - Adding index/faiss support
@@ -38,6 +39,15 @@ The 27th line of '**RVC_Onnx_Infer.py**' script;
 The 22nd line of '**RVC_Onnx_Infer.py**' script;
 > hop_size = 64 # hop size for inference  -  smaller size = higher accuracy, yet, higher risk of catching noise residues. try: 64, 128 or 512 or try own / custom.
 
+⠀<br />
+⠀<br />
+⠀<br />
+# | v0.2a | 10.12.2023 - CHANGELOG: <br />
+### Notes:
+- No more '50 seconds max' per infer / file length.
+( Now it's internally: Slicing, inferencing the segments 1 by 1 to avoid memory issues and merging it all into 1 final output. )  
+- **DML x CPU is set as default** for the main device.<br />
+- Made the console a lil bit more fancy lol
 ⠀<br />
 ⠀<br />
 ⠀<br />
