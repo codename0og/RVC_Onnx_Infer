@@ -37,7 +37,8 @@ The 27th line of '**RVC_Onnx_Infer.py**' script;
 ⠀<br />
 ### 6. To change hop_size, replace the '64' value with any desired.<br />
 The 22nd line of '**RVC_Onnx_Infer.py**' script;
-> hop_size = 64 # hop size for inference  -  smaller size = higher accuracy, yet, higher risk of catching noise residues. try: 64, 128 or 512 or try own / custom.
+> hop_size = 64 # hop size for inference. ( Currently, applies only to dio F0 )<br />
+> Try: 32, 64, 128, 256, 512  or custom of your choice.
 
 ⠀<br />
 ⠀<br />
@@ -47,6 +48,7 @@ The 22nd line of '**RVC_Onnx_Infer.py**' script;
 - **Inference max length limit off** - No more '50 seconds max' per infer / file length.<br />
 ( Now it's internally slicing, inferencing the segments 1 by 1 to avoid memory issues and merging it all into 1 final output. )  
 - **DML x CPU is set as default** for the main device.<br />
+- PM F0 Pitch estimation: Yea, I sorta fixed it but it's not perfect ( Doesn't support custom hop length too ) - Dio is better.
 - Cosmetics changes - Made the console a lil bit more fancy lol + logging of segmenting process and so on.
 ⠀<br />
 ⠀<br />
@@ -54,7 +56,7 @@ The 22nd line of '**RVC_Onnx_Infer.py**' script;
 # INITIAL RELEASE: v0.1a<br />
 ### Notes:
 - Project is in an **early alpha-dev / test / debug state.**
-- Currently only Dio F0 Pitch extraction until I figure out the rest.
+- Currently only Dio F0 Pitch estimation until I figure out the rest.
 - It is supporting **RVC V2 onnx models only.**<br />
 (V1 models do not work unless you get 256-layer-9 vec onnx and modify the code appropriately.)
 ⠀<br />
