@@ -24,12 +24,12 @@ sid = 0 # Speaker ID, unusable atm.
 vec_name = "vec-768-layer-12"  # pretrained ONNX variant of vec
 
 # DEVICE SETTINGS
-device = "cpu"  # options: dml, cuda, cpu
+device = "dml"  # options: dml, cuda, cpu
 
 # Set your model's name                         / Here / 
-model_path = os.path.join("onnx_models", "Your_Model.onnx")  # Your .ONNX model
+model_path = os.path.join("onnx_models", "Your_Model")  # Your .ONNX model
 output_folder = "output"  # Output folder for inferences
-output_filename = "infer_output.wav"  # name for inference outputs
+output_filename = "infer_output_merged.wav"  # name for inference outputs
 
 
 
