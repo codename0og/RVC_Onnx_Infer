@@ -6,7 +6,7 @@ from infer.lib.infer_pack.modules.F0Predictor.F0Predictor import F0Predictor
 
 class DioF0Predictor(F0Predictor):
     def __init__(self, hop_length=512, f0_min=50, f0_max=1100, sampling_rate=44100):
-        self.hop_length = 441 if sampling_rate == 44100 else (480 if sampling_rate == 48000 else 512)
+        self.hop_length = hop_length
         self.f0_min = f0_min
         self.f0_max = f0_max
         self.sampling_rate = sampling_rate
